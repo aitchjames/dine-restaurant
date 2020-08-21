@@ -1,0 +1,164 @@
+:root {
+  --color-beaver: #9e7f66;
+  --color-xiketic: #17192b;
+  --color-gunmetal: #242b37;
+  --color-black-coral: #5c6779;
+  --color-davys-grey: #4c4c4c;
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-border: rgba(151, 151, 151, 0.15);
+  --color-dark-blue-shadow: rgba(56, 66, 85, 0.5);
+  --color-error: #B54949;
+  --transition: 300ms ease-in-out;
+  --card-shadow: 0 7.5rem 10rem -5rem var(--color-dark-blue-shadow); }
+
+.heading-one {
+  color: var(--color-white);
+  font-size: 6.4rem;
+  line-height: 1.125; }
+  @media only screen and (max-width: 768px) {
+    .heading-one {
+      font-size: 4.8rem;
+      line-height: 1.333; } }
+  @media only screen and (max-width: 640px) {
+    .heading-one {
+      font-size: 3.2rem;
+      line-height: 1.25; } }
+
+.heading-two {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.4; }
+  .heading-two__dark {
+    color: var(--color-gunmetal); }
+  .heading-two__light {
+    color: var(--color-white); }
+  @media only screen and (max-width: 640px) {
+    .heading-two {
+      font-size: 3.2rem;
+      line-height: 1.25; } }
+
+.body-copy {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.667; }
+  .body-copy__dark {
+    color: var(--color-gunmetal); }
+  .body-copy__light {
+    color: var(--color-white); }
+  @media only screen and (max-width: 640px) {
+    .body-copy {
+      font-size: 1.5rem; } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Spartan', sans-serif;
+  background-color: var(--color-black);
+  min-height: 100vh;
+  min-width: 32rem;
+  overflow-x: hidden; }
+
+.container {
+  margin: 0 auto;
+  max-width: 95%;
+  min-width: 32rem;
+  width: 144rem; }
+
+.container-sm {
+  margin: 0 auto;
+  max-width: 95%;
+  min-width: 32rem;
+  width: 110rem; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.button {
+  display: inline-block;
+  background: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 1.143;
+  letter-spacing: 2px;
+  padding: 2.3rem 5.3rem;
+  cursor: pointer;
+  text-decoration: none; }
+  .button__dark {
+    color: var(--color-white);
+    background-color: transparent;
+    border: 1px solid var(--color-white);
+    transition: var(--transition) background-color, var(--transition) color; }
+    .button__dark:hover {
+      background-color: var(--color-white);
+      color: var(--color-black); }
+  .button__light {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border: 1px solid transparent;
+    transition: var(--transition) background-color, var(--transition) color, var(--transition) border-color; }
+    .button__light:hover {
+      background-color: transparent;
+      color: var(--color-black);
+      border-color: var(--color-black); }
+
+.hero {
+  padding-top: 6.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../../images/homepage/hero-bg-desktop.jpg); }
+  @media only screen and (max-width: 1024px) {
+    .hero {
+      background-image: url(../../../images/homepage/hero-bg-tablet.jpg); } }
+  @media only screen and (max-width: 640px) {
+    .hero {
+      background-image: url(../../../images/homepage/hero-bg-mobile.jpg); } }
+  .hero .container {
+    height: 75rem;
+    display: grid;
+    grid-template-rows: min-content 1fr; }
+    @media only screen and (max-width: 1024px) {
+      .hero .container {
+        grid-template-rows: min-content min-content;
+        text-align: center;
+        align-content: center;
+        justify-items: center;
+        padding-top: 10.5rem;
+        height: 90rem; } }
+    @media only screen and (max-width: 640px) {
+      .hero .container {
+        height: 70rem;
+        padding-top: 10rem; } }
+    @media only screen and (max-width: 410px) {
+      .hero .container {
+        height: 65rem;
+        padding-top: 5rem; } }
+  @media only screen and (max-width: 1024px) {
+    .hero-brand {
+      padding-bottom: 3rem; } }
+  .hero-content {
+    align-self: center; }
+  .hero-heading {
+    font-weight: 400; }
+  .hero-body {
+    max-width: 45rem;
+    margin-top: 2.4rem; }
+    @media only screen and (max-width: 1024px) {
+      .hero-body {
+        margin: 2.4rem auto 0 auto; } }
+  .hero-button {
+    margin-top: 4.2rem; }
+
+.highlights {
+  background-color: var(--color-white); }

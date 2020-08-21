@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    background-color: var(--color-black);
+    min-height: 100vh;
+    min-width: 32rem;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 95%;
+    min-width: 32rem;
+    width: 144rem;
+}
+
+.container-sm {
+    margin: 0 auto;
+    max-width: 95%;
+    min-width: 32rem;
+    width: 110rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
