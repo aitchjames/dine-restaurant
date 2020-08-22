@@ -1,3 +1,123 @@
 .highlights {
     background-color: var(--color-white);
+    background-repeat: no-repeat;
+    background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
+    background-position-y: 24.2rem, bottom;
+    background-position-x: left, right;
+
+    @media only screen and (max-width: $breakpoint-lg) {
+        background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
+        background-position-y: 10rem, bottom;
+        background-position-x: -67vw, 52vw;
+    }
+
+    &-location {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 7.5rem;
+        grid-template-areas: 'location-image location-content';
+
+        @media only screen and (max-width: $breakpoint-lg) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 'location-image' 'location-content';
+        }
+
+        &__image {
+            grid-area: location-image;
+
+            & img {
+                transform: translateY(-7rem);
+                width: 100%;
+
+                @media only screen and (max-width: $breakpoint-lg) {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &__content {
+            grid-area: location-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 48rem;
+            margin-left: auto;
+
+            @media only screen and (max-width: $breakpoint-lg) {
+                max-width: 45rem;
+                margin: 0 auto 8rem auto;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+            }
+
+            & .heading-two {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &-food {
+        display: grid;
+        grid-template-columns: 1fr 1fr;        
+        column-gap: 7.5rem;
+        grid-template-areas: 'food-content food-image';
+
+        @media only screen and (max-width: $breakpoint-lg) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 'food-image' 'food-content';
+        }
+
+        &__image {
+            grid-area: food-image;
+            position: relative;
+
+            & img {
+                transform: translateY(5rem);
+                width: 100%;
+
+                @media only screen and (max-width: $breakpoint-lg) {
+                    transform: translateY(0);
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+
+            & .pattern-lines {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateX(65%);
+
+                @media only screen and (max-width: $breakpoint-lg) {
+                    transform: translateX(0);
+                }
+
+                @media only screen and (max-width: $breakpoint-sm) {
+                    display: none;
+                }
+            }
+        }
+
+        &__content {
+            grid-area: food-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 48rem;
+
+            @media only screen and (max-width: $breakpoint-lg) {
+                max-width: 45rem;
+                margin: 8rem auto 8rem auto;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+            }
+
+            & .heading-two {
+                margin-bottom: 2rem;
+            }
+        }
+    }
 }

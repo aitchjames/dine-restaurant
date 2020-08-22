@@ -1,4 +1,4 @@
-# Dine Website 🍽
+# Dine Restaurant Website 🍽
 
 ![Design preview for the Dine Website Challenge coding challenge](./preview.jpg)
 

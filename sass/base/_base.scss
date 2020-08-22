@@ -24,17 +24,22 @@ body {
     margin: 0 auto;
     max-width: 95%;
     min-width: 32rem;
-    width: 144rem;
+    width: 120rem;
 }
 
 .container-sm {
     margin: 0 auto;
     max-width: 95%;
     min-width: 32rem;
-    width: 110rem;
+    width: 111rem;
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
+}
+
+.divider {
+    margin-bottom: 4.5rem;
 }

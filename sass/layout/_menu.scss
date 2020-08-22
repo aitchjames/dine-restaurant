@@ -1,0 +1,10 @@
+.menu {
+    padding: 15rem 0 10rem 0;
+
+    & .container-sm {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 7.5rem;
+        grid-template-areas: 'menu-content menu-items';
+    }
+}
