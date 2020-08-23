@@ -28,12 +28,12 @@
 
         @media only screen and (max-width: $breakpoint-sm) {
             height: 70rem;
-            padding-top: 10rem;
+            padding-top: 0rem;
         }
 
         @media only screen and (max-width: $breakpoint-xsm) {
             height: 65rem;
-            padding-top: 5rem;
+            padding-top: 0rem;
         }
     }   
 

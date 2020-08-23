@@ -11,6 +11,10 @@
         background-position-x: -67vw, 52vw;
     }
 
+    @media only screen and (max-width: $breakpoint-sm) {
+        background-image: none;        
+    }
+
     &-location {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -50,6 +54,10 @@
                 align-items: center;
                 align-content: center;
                 text-align: center;
+            }
+
+            @media only screen and (max-width: $breakpoint-sm) {
+                max-width: 35rem;
             }
 
             & .heading-two {
@@ -113,6 +121,10 @@
                 align-items: center;
                 align-content: center;
                 text-align: center;
+            }
+
+            @media only screen and (max-width: $breakpoint-sm) {
+                max-width: 35rem;
             }
 
             & .heading-two {
