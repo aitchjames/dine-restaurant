@@ -1,0 +1,31 @@
+.call-to-action {
+    background-repeat: no-repeat;    
+    background-size: cover;
+    background-image: url(../../../images/homepage/ready-bg-desktop.jpg);
+
+    @media only screen and (max-width: $breakpoint-lg) {
+        background-image: url(../../../images/homepage/ready-bg-tablet.jpg);
+    }
+
+    @media only screen and (max-width: $breakpoint-sm) {
+        background-image: url(../../../images/homepage/ready-bg-mobile.jpg);
+    }
+
+    & .container {
+        padding: 8.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: $breakpoint-lg) {
+            flex-direction: column;
+        }
+
+        & .heading-two {
+            @media only screen and (max-width: $breakpoint-lg) {
+                margin-bottom: 2.5rem;
+                text-align: center;
+            }
+        }
+    }
+}
