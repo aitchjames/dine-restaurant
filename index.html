@@ -125,39 +125,39 @@
                         <picture>
                             <source srcset="images/homepage/family-gathering-desktop.jpg 1024w, images/homepage/family-gathering-desktop@2x.jpg 2048w" media="(min-width: 1024px)">
                             <source srcset="images/homepage/family-gathering-tablet.jpg 1024w, images/homepage/family-gathering-tablet@2x.jpg 2048w" media="(min-width: 640px)">
-                            <img srcset="images/homepage/family-gathering-mobile.jpg 640w, images/homepage/family-gathering-mobile@2x.jpg 1280w" class="events-slide__image active" alt="">
+                            <img srcset="images/homepage/family-gathering-mobile.jpg 640w, images/homepage/family-gathering-mobile@2x.jpg 1280w" id="family-gathering-image" class="events-slide__image is-active" alt="">
                         </picture>
                         <picture>
                             <source srcset="images/homepage/special-events-desktop.jpg 1024w, images/homepage/special-events-desktop@2x.jpg 2048w" media="(min-width: 1024px)">
                             <source srcset="images/homepage/special-events-tablet.jpg 1024w, images/homepage/special-events-tablet@2x.jpg 2048w" media="(min-width: 640px)">
-                            <img srcset="images/homepage/special-events-mobile.jpg 640w, images/homepage/special-events-mobile@2x.jpg 1280w" class="events-slide__image" alt="">
+                            <img srcset="images/homepage/special-events-mobile.jpg 640w, images/homepage/special-events-mobile@2x.jpg 1280w" id="special-events-image" class="events-slide__image" alt="">
                         </picture>
                         <picture>
                             <source srcset="images/homepage/social-events-desktop.jpg 1024w, images/homepage/social-events-desktop@2x.jpg 2048w" media="(min-width: 1024px)">
                             <source srcset="images/homepage/social-events-tablet.jpg 1024w, images/homepage/social-events-tablet@2x.jpg 2048w" media="(min-width: 640px)">
-                            <img srcset="images/homepage/social-events-mobile.jpg 640w, images/homepage/social-events-mobile@2x.jpg 1280w" class="events-slide__image" alt="">
+                            <img srcset="images/homepage/social-events-mobile.jpg 640w, images/homepage/social-events-mobile@2x.jpg 1280w" id="social-events-image" class="events-slide__image" alt="">
                         </picture>
                     </div>
                     <div class="events-slide__content">
                         <div class="events-slide__content-items">
-                            <div class="events-slide__content-item active">
+                            <div id="family-gathering-content" class="events-slide__content-item is-active">
                                 <h2 class="heading-two heading-two__dark">Family Gathering</h2>
                                 <p class="body-copy body-copy__dark">We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.</p>
                             </div>
-                            <div class="events-slide__content-item">
+                            <div id="special-events-content" class="events-slide__content-item">
                                 <h2 class="heading-two heading-two__dark">Special Events</h2>
                                 <p class="body-copy body-copy__dark">Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.</p>
                             </div>
-                            <div class="events-slide__content-item">
+                            <div id="social-events-content" class="events-slide__content-item">
                                 <h2 class="heading-two heading-two__dark">Social Events</h2>
                                 <p class="body-copy body-copy__dark">Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.</p>
                             </div>
                         </div>
                         <a class="button button__light" href="#!">Book a table</a>
                         <div class="events-slide__indicators">
-                            <button class="events-slide__indicator active">Family Gathering</button>
-                            <button class="events-slide__indicator">Special Events</button>
-                            <button class="events-slide__indicator">Social Events</button>
+                            <button id="family-gathering" class="events-slide__indicator is-active">Family Gathering</button>
+                            <button id="special-events" class="events-slide__indicator">Special Events</button>
+                            <button id="social-events" role="tab" aria-selected="false" class="events-slide__indicator">Social Events</button>
                         </div>
                     </div>
 
@@ -190,6 +190,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/index.js" defer></script>
 </body>
 
 </html>

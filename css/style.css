@@ -161,14 +161,14 @@ img {
     display: none;
     visibility: hidden;
     opacity: 0; }
-    .events-slide__image.active {
+    .events-slide__image.is-active {
       display: block;
       visibility: visible;
       opacity: 1;
       z-index: 5;
       animation: slide-fade var(--transition); }
       @media only screen and (max-width: 1024px) {
-        .events-slide__image.active {
+        .events-slide__image.is-active {
           margin: 0 auto; } }
   .events-slide__content {
     margin-left: 7.5rem;
@@ -196,7 +196,7 @@ img {
       visibility: hidden;
       opacity: 0;
       max-width: 45rem; }
-      .events-slide__content-item.active {
+      .events-slide__content-item.is-active {
         display: block;
         visibility: visible;
         opacity: 1;
@@ -245,10 +245,10 @@ img {
     opacity: 0.5; }
     .events-slide__indicator:hover {
       opacity: 1; }
-    .events-slide__indicator.active {
+    .events-slide__indicator.is-active {
       position: relative;
       opacity: 1; }
-      .events-slide__indicator.active::before {
+      .events-slide__indicator.is-active::before {
         z-index: 1;
         content: "";
         position: absolute;
@@ -259,11 +259,11 @@ img {
         width: 9.5rem;
         transform: translateY(0.8rem) translateX(-12.5rem); }
         @media only screen and (max-width: 1280px) {
-          .events-slide__indicator.active::before {
+          .events-slide__indicator.is-active::before {
             transform: translateY(0.8rem) translateX(-9.5rem);
             width: 7.5rem; } }
         @media only screen and (max-width: 1024px) {
-          .events-slide__indicator.active::before {
+          .events-slide__indicator.is-active::before {
             width: 8.5rem;
             transform: translateY(1rem) translateX(50%);
             bottom: 0;
