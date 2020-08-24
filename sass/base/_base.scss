@@ -18,6 +18,8 @@ body {
     min-height: 100vh;
     min-width: 32rem;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -35,4 +37,14 @@ img {
 
 .divider {
     margin-bottom: 4.5rem;
+}
+
+@keyframes slide-fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

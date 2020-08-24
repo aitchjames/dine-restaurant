@@ -29,7 +29,9 @@ body {
   background-color: var(--color-black);
   min-height: 100vh;
   min-width: 32rem;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .container {
   margin: 0 auto;
@@ -44,6 +46,12 @@ img {
 
 .divider {
   margin-bottom: 4.5rem; }
+
+@keyframes slide-fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .heading-one {
   color: var(--color-white);
@@ -137,6 +145,129 @@ img {
 .events {
   padding: 15rem 0 10rem 0;
   background-color: var(--color-white); }
+  @media only screen and (max-width: 1024px) {
+    .events {
+      padding: 10rem 0; } }
+  .events .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    grid-template-areas: 'events-images events-content'; }
+    @media only screen and (max-width: 1024px) {
+      .events .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'events-images' 'events-content'; } }
+  .events-slide__image {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
+    .events-slide__image.active {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      z-index: 5;
+      animation: slide-fade var(--transition); }
+      @media only screen and (max-width: 1024px) {
+        .events-slide__image.active {
+          margin: 0 auto; } }
+  .events-slide__content {
+    margin-left: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+    @media only screen and (max-width: 1280px) {
+      .events-slide__content {
+        margin-left: 4.5rem; } }
+    @media only screen and (max-width: 1024px) {
+      .events-slide__content {
+        margin-left: 0;
+        align-items: center;
+        text-align: center; } }
+    .events-slide__content-items {
+      min-height: 20rem;
+      margin-bottom: 3rem; }
+      @media only screen and (max-width: 1024px) {
+        .events-slide__content-items {
+          order: 2;
+          min-height: 15rem; } }
+    .events-slide__content-item {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      max-width: 45rem; }
+      .events-slide__content-item.active {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        animation: slide-fade var(--transition); }
+      .events-slide__content-item .heading-two {
+        margin-bottom: 1rem; }
+      .events-slide__content-item .body-copy {
+        margin-bottom: 2rem; }
+    @media only screen and (max-width: 1024px) {
+      .events-slide__content .button {
+        order: 3; } }
+  .events-slide__indicators {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    @media only screen and (max-width: 1024px) {
+      .events-slide__indicators {
+        width: 100%;
+        max-width: 68rem;
+        flex-direction: row;
+        justify-content: space-between;
+        order: 1;
+        margin-bottom: 3.5rem;
+        margin-top: 5rem; } }
+    @media only screen and (max-width: 640px) {
+      .events-slide__indicators {
+        width: 100%;
+        max-width: 68rem;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+        margin-bottom: 3.5rem; } }
+  .events-slide__indicator {
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    color: var(--color-davys-grey);
+    transition: opacity var(--transition);
+    opacity: 0.5; }
+    .events-slide__indicator:hover {
+      opacity: 1; }
+    .events-slide__indicator.active {
+      position: relative;
+      opacity: 1; }
+      .events-slide__indicator.active::before {
+        z-index: 1;
+        content: "";
+        position: absolute;
+        border-top: 1px solid var(--color-beaver);
+        top: 0;
+        left: 0;
+        height: 1px;
+        width: 9.5rem;
+        transform: translateY(0.8rem) translateX(-12.5rem); }
+        @media only screen and (max-width: 1280px) {
+          .events-slide__indicator.active::before {
+            transform: translateY(0.8rem) translateX(-9.5rem);
+            width: 7.5rem; } }
+        @media only screen and (max-width: 1024px) {
+          .events-slide__indicator.active::before {
+            width: 8.5rem;
+            transform: translateY(1rem) translateX(50%);
+            bottom: 0;
+            top: initial; } }
 
 .footer {
   padding: 7.5rem 0 5.5rem 0;
