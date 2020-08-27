@@ -1,0 +1,164 @@
+.reservations {    
+    height: 60rem;
+    padding-top: 6.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../images/booking/hero-bg-desktop.jpg);
+
+    @media only screen and (max-width: $breakpoint-lg) {
+        background-image: url(../../../images/booking/hero-bg-tablet.jpg);
+    }
+
+    @media only screen and (max-width: $breakpoint-sm) {
+        background-image: url(../../../images/booking/hero-bg-mobile.jpg);
+    }
+
+    & .container {
+        
+        & .hero-brand {
+            margin-bottom: 15rem;
+        }
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 7.5rem;
+        grid-template-areas: 'res-text res-form';
+
+        @media only screen and (max-width: $breakpoint-lg) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 'res-text' 'res-form';
+        }
+    }
+
+    &-heading {
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    &-body {
+        max-width: 45rem;
+    }
+
+    &-form {
+        background-color: var(--color-white);
+        padding: 5rem;
+        box-shadow: var(--card-shadow);
+
+        &__group {
+            display: block;
+            margin-bottom: 2rem;
+        }
+
+        &__group-datetime {
+            display: grid;
+            grid-template-columns: 12rem 8rem 8rem 10rem;
+            column-gap: 1.5rem;
+
+            &__finput {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        &__group-numpicker {
+            border-bottom: 1px solid var(--color-black);
+            display: grid;
+            grid-template-columns: 6.5rem 1fr 6.5rem;
+            column-gap: 1.5rem;
+            padding: 2rem 0;
+            align-items: center;
+            justify-items: center;
+        }
+
+        &__label {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        &__input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid var(--color-black);
+            padding: 1rem 1.5rem 2rem 1.5rem;
+            font-size: 1.8rem;
+            font-family: 'Spartan', sans-serif;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+               -webkit-appearance: none;
+               margin: 0;
+            }
+
+            &::placeholder {
+                font-family: 'Spartan', sans-serif;
+                font-size: 1.8rem;
+                opacity: 0.5;
+            }
+        }
+
+        &__text {
+            font-size: 1.8rem;
+            color: var(--color-black);
+        }
+
+        &__button {
+            display: inline-block;
+            background: var(--color-black);
+            color: var(--color-white);
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            line-height: 1.143;
+            letter-spacing: 2px;
+            padding: 2.3rem 5.3rem;
+            cursor: pointer;
+            text-decoration: none;
+            border: 1px solid transparent;
+            width: 100%;
+            transition: var(--transition) background-color, var(--transition) color, var(--transition) border-color;
+
+            &:hover {
+                background-color: var(--color-white);
+                color: var(--color-black);
+                border-color: var(--color-black);
+            }
+
+            &-numpicker {
+                cursor: pointer;
+                border: 1px solid transparent;
+                background-size: cover;
+                background-color: var(--color-white);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 6.5rem;
+                height: 3rem;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        height: 30rem;
+        background-color: var(--color-white);
+        background-repeat: no-repeat;
+        background-image: url(../../../images/patterns/pattern-curve-bottom-right.svg);
+
+        @media only screen and (max-width: $breakpoint-lg) {
+            background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
+            background-position-y: 10rem, bottom;
+            background-position-x: -67vw, 52vw;
+        }
+    }
+}

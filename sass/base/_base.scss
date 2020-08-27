@@ -35,6 +35,10 @@ img {
     height: auto;
 }
 
+*:focus {
+    outline: 0.2rem dotted var(--color-beaver);
+}
+
 .divider {
     margin-bottom: 4.5rem;
 }

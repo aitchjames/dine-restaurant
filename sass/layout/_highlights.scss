@@ -132,4 +132,8 @@
             }
         }
     }
+
+    &-shadow {
+        box-shadow: var(--card-shadow);
+    }
 }
