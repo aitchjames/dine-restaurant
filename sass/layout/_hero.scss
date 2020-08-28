@@ -2,14 +2,14 @@
     padding-top: 6.5rem;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(./images/homepage/hero-bg-desktop.jpg);
+    background-image: url(images/homepage/hero-bg-desktop.jpg);
 
     @media only screen and (max-width: $breakpoint-lg) {
-        background-image: url(./images/homepage/hero-bg-tablet.jpg);
+        background-image: url(images/homepage/hero-bg-tablet.jpg);
     }
 
     @media only screen and (max-width: $breakpoint-sm) {
-        background-image: url(./images/homepage/hero-bg-mobile.jpg);
+        background-image: url(images/homepage/hero-bg-mobile.jpg);
     }
 
     & .container {

@@ -1,12 +1,12 @@
 .highlights {
     background-color: var(--color-white);
     background-repeat: no-repeat;
-    background-image: url(/images/patterns/pattern-curve-top-right.svg), url(/images/patterns/pattern-curve-top-left.svg);
+    background-image: url(images/patterns/pattern-curve-top-right.svg), url(images/patterns/pattern-curve-top-left.svg);
     background-position-y: 24.2rem, bottom;
     background-position-x: left, right;
 
     @media only screen and (max-width: $breakpoint-lg) {
-        background-image: url(/images/patterns/pattern-curve-top-right.svg), url(/images/patterns/pattern-curve-top-left.svg);
+        background-image: url(images/patterns/pattern-curve-top-right.svg), url(images/patterns/pattern-curve-top-left.svg);
         background-position-y: 10rem, bottom;
         background-position-x: -67vw, 52vw;
     }
