@@ -578,7 +578,6 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../../../images/booking/hero-bg-desktop.jpg);
-  z-index: 10;
   overflow: visible; }
   @media only screen and (max-width: 1024px) {
     .reservations {
@@ -590,16 +589,12 @@ img {
     margin-bottom: 15rem; }
     @media only screen and (max-width: 1024px) {
       .reservations .container .hero-brand {
-        margin-bottom: 3rem; } }
-    @media only screen and (max-width: 640px) {
-      .reservations .container .hero-brand {
         margin: 0 auto 3rem auto; } }
   .reservations-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 7.5rem;
-    grid-template-areas: 'res-text res-form';
-    z-index: 10; }
+    grid-template-areas: 'res-text res-form'; }
     @media only screen and (max-width: 1024px) {
       .reservations-content {
         grid-template-columns: 1fr;
@@ -612,6 +607,17 @@ img {
     @media only screen and (max-width: 640px) {
       .reservations-content__text {
         max-width: 33rem; } }
+    .reservations-content__form {
+      position: relative; }
+      .reservations-content__form .pattern-lines {
+        z-index: 1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-50%) translateY(35%); }
+        @media only screen and (max-width: 1024px) {
+          .reservations-content__form .pattern-lines {
+            display: none; } }
   .reservations-heading {
     font-weight: 400;
     margin-bottom: 1rem; }
@@ -622,10 +628,11 @@ img {
         margin: 0 auto;
         max-width: 60rem; } }
   .reservations-form {
+    position: relative;
     background-color: var(--color-white);
     padding: 5rem;
     box-shadow: var(--card-shadow);
-    z-index: 10; }
+    z-index: 15; }
     @media only screen and (max-width: 1024px) {
       .reservations-form {
         margin: 0 auto;
@@ -749,6 +756,8 @@ img {
         .reservations-form__button-numpicker:hover {
           transform: scale(1.5);
           opacity: 1; }
+        .reservations-form__button-numpicker:focus {
+          outline: 0.2rem dotted transparent; }
   .reservations-bottom {
     height: 30rem;
     background-color: var(--color-white);

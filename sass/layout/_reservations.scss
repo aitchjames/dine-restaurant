@@ -4,7 +4,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../../../images/booking/hero-bg-desktop.jpg);
-    z-index: 10;
     overflow: visible;
 
     @media only screen and (max-width: $breakpoint-lg) {
@@ -21,10 +20,6 @@
             margin-bottom: 15rem;
 
             @media only screen and (max-width: $breakpoint-lg) {
-                margin-bottom: 3rem;
-            }
-
-            @media only screen and (max-width: $breakpoint-sm) {
                 margin: 0 auto 3rem auto;
             }
         }
@@ -35,7 +30,6 @@
         grid-template-columns: 1fr 1fr;
         column-gap: 7.5rem;
         grid-template-areas: 'res-text res-form';
-        z-index: 10;
 
         @media only screen and (max-width: $breakpoint-lg) {
             grid-template-columns: 1fr;
@@ -51,6 +45,22 @@
 
             @media only screen and (max-width: $breakpoint-sm) {
                 max-width: 33rem;
+            }
+        }
+
+        &__form {
+            position: relative;
+
+            & .pattern-lines {
+                z-index: 1;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translateX(-50%) translateY(35%);
+
+                @media only screen and (max-width: $breakpoint-lg) {
+                    display: none;
+                }
             }
         }
     }
@@ -70,10 +80,11 @@
     }
 
     &-form {
+        position: relative;
         background-color: var(--color-white);
         padding: 5rem;
         box-shadow: var(--card-shadow);
-        z-index: 10;
+        z-index: 15;
 
         @media only screen and (max-width: $breakpoint-lg) {
             margin: 0 auto;
@@ -218,7 +229,7 @@
                 background-color: var(--color-white);
                 color: var(--color-black);
                 border-color: var(--color-black);
-            }
+            }            
 
             &-numpicker {
                 cursor: pointer;
@@ -236,6 +247,10 @@
                 &:hover {
                     transform: scale(1.5);
                     opacity: 1;
+                }
+
+                &:focus {
+                    outline: 0.2rem dotted transparent;
                 }
             }
         }

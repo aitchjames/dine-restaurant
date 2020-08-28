@@ -16,16 +16,16 @@ minusButton.addEventListener('click', event => {
     event.preventDefault()
     if (numOfPeople.textContent > 1) {
         numOfPeople.textContent = parseInt(numOfPeople.textContent) - 1
+        checkPlural()
     }
-    checkPlural()
 })
 
 plusButton.addEventListener('click', event => {
     event.preventDefault()
     if (numOfPeople.textContent < 20) {
         numOfPeople.textContent = parseInt(numOfPeople.textContent) + 1
+        checkPlural()
     }
-    checkPlural()
 })
 
 function checkPlural() {
