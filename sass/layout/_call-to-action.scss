@@ -1,14 +1,14 @@
 .call-to-action {
     background-repeat: no-repeat;    
     background-size: cover;
-    background-image: url(../../../images/homepage/ready-bg-desktop.jpg);
+    background-image: url(/images/homepage/ready-bg-desktop.jpg);
 
     @media only screen and (max-width: $breakpoint-lg) {
-        background-image: url(../../../images/homepage/ready-bg-tablet.jpg);
+        background-image: url(/images/homepage/ready-bg-tablet.jpg);
     }
 
     @media only screen and (max-width: $breakpoint-sm) {
-        background-image: url(../../../images/homepage/ready-bg-mobile.jpg);
+        background-image: url(/images/homepage/ready-bg-mobile.jpg);
     }
 
     & .container {

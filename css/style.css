@@ -126,13 +126,13 @@ img {
 .call-to-action {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../../../images/homepage/ready-bg-desktop.jpg); }
+  background-image: url(/images/homepage/ready-bg-desktop.jpg); }
   @media only screen and (max-width: 1024px) {
     .call-to-action {
-      background-image: url(../../../images/homepage/ready-bg-tablet.jpg); } }
+      background-image: url(/images/homepage/ready-bg-tablet.jpg); } }
   @media only screen and (max-width: 640px) {
     .call-to-action {
-      background-image: url(../../../images/homepage/ready-bg-mobile.jpg); } }
+      background-image: url(/images/homepage/ready-bg-mobile.jpg); } }
   .call-to-action .container {
     padding: 8.5rem 0;
     display: flex;
@@ -336,13 +336,13 @@ img {
   padding-top: 6.5rem;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../../../images/homepage/hero-bg-desktop.jpg); }
+  background-image: url(/images/homepage/hero-bg-desktop.jpg); }
   @media only screen and (max-width: 1024px) {
     .hero {
-      background-image: url(../../../images/homepage/hero-bg-tablet.jpg); } }
+      background-image: url(/images/homepage/hero-bg-tablet.jpg); } }
   @media only screen and (max-width: 640px) {
     .hero {
-      background-image: url(../../../images/homepage/hero-bg-mobile.jpg); } }
+      background-image: url(/images/homepage/hero-bg-mobile.jpg); } }
   .hero .container {
     height: 75rem;
     display: grid;
@@ -382,12 +382,12 @@ img {
 .highlights {
   background-color: var(--color-white);
   background-repeat: no-repeat;
-  background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
+  background-image: url(/images/patterns/pattern-curve-top-right.svg), url(/images/patterns/pattern-curve-top-left.svg);
   background-position-y: 24.2rem, bottom;
   background-position-x: left, right; }
   @media only screen and (max-width: 1024px) {
     .highlights {
-      background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
+      background-image: url(/images/patterns/pattern-curve-top-right.svg), url(/images/patterns/pattern-curve-top-left.svg);
       background-position-y: 10rem, bottom;
       background-position-x: -67vw, 52vw; } }
   @media only screen and (max-width: 640px) {
@@ -577,14 +577,14 @@ img {
   padding-top: 6.5rem;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../../../images/booking/hero-bg-desktop.jpg);
+  background-image: url(/images/booking/hero-bg-desktop.jpg);
   overflow: visible; }
   @media only screen and (max-width: 1024px) {
     .reservations {
-      background-image: url(../../../images/booking/hero-bg-tablet.jpg); } }
+      background-image: url(/images/booking/hero-bg-tablet.jpg); } }
   @media only screen and (max-width: 640px) {
     .reservations {
-      background-image: url(../../../images/booking/hero-bg-mobile.jpg); } }
+      background-image: url(/images/booking/hero-bg-mobile.jpg); } }
   .reservations .container .hero-brand {
     margin-bottom: 15rem; }
     @media only screen and (max-width: 1024px) {
@@ -762,10 +762,10 @@ img {
     height: 30rem;
     background-color: var(--color-white);
     background-repeat: no-repeat;
-    background-image: url(../../../images/patterns/pattern-curve-bottom-right.svg); }
+    background-image: url(/images/patterns/pattern-curve-bottom-right.svg); }
     @media only screen and (max-width: 1024px) {
       .reservations-bottom {
         height: 45rem;
-        background-image: url(../../../images/patterns/pattern-curve-bottom-right.svg);
+        background-image: url(/images/patterns/pattern-curve-bottom-right.svg);
         background-position-y: 10rem, bottom;
         background-position-x: -67vw, 52vw; } }
