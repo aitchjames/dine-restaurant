@@ -3,15 +3,15 @@
     padding-top: 6.5rem;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(images/booking/hero-bg-desktop.jpg);
+    background-image: url(./../images/booking/hero-bg-desktop.jpg);
     overflow: visible;
 
     @media only screen and (max-width: $breakpoint-lg) {
-        background-image: url(images/booking/hero-bg-tablet.jpg);
+        background-image: url(./../images/booking/hero-bg-tablet.jpg);
     }
 
     @media only screen and (max-width: $breakpoint-sm) {
-        background-image: url(images/booking/hero-bg-mobile.jpg);
+        background-image: url(./../images/booking/hero-bg-mobile.jpg);
     }
 
     & .container {
@@ -260,11 +260,11 @@
         height: 30rem;
         background-color: var(--color-white);
         background-repeat: no-repeat;
-        background-image: url(images/patterns/pattern-curve-bottom-right.svg);
+        background-image: url(./../images/patterns/pattern-curve-bottom-right.svg);
 
         @media only screen and (max-width: $breakpoint-lg) {
             height: 45rem;
-            background-image: url(images/patterns/pattern-curve-bottom-right.svg);
+            background-image: url(./../images/patterns/pattern-curve-bottom-right.svg);
             background-position-y: 10rem, bottom;
             background-position-x: -67vw, 52vw;
         }
