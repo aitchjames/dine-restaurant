@@ -4,6 +4,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../../../images/booking/hero-bg-desktop.jpg);
+    z-index: 10;
+    overflow: visible;
 
     @media only screen and (max-width: $breakpoint-lg) {
         background-image: url(../../../images/booking/hero-bg-tablet.jpg);
@@ -17,6 +19,14 @@
         
         & .hero-brand {
             margin-bottom: 15rem;
+
+            @media only screen and (max-width: $breakpoint-lg) {
+                margin-bottom: 3rem;
+            }
+
+            @media only screen and (max-width: $breakpoint-sm) {
+                margin: 0 auto 3rem auto;
+            }
         }
     }
 
@@ -25,10 +35,23 @@
         grid-template-columns: 1fr 1fr;
         column-gap: 7.5rem;
         grid-template-areas: 'res-text res-form';
+        z-index: 10;
 
         @media only screen and (max-width: $breakpoint-lg) {
             grid-template-columns: 1fr;
             grid-template-areas: 'res-text' 'res-form';
+        }
+
+        &__text {
+            @media only screen and (max-width: $breakpoint-lg) {
+                margin: 0 auto 3rem auto;
+                max-width: 60rem;
+                text-align: center;
+            }
+
+            @media only screen and (max-width: $breakpoint-sm) {
+                max-width: 33rem;
+            }
         }
     }
 
@@ -39,12 +62,27 @@
 
     &-body {
         max-width: 45rem;
+
+        @media only screen and (max-width: $breakpoint-lg) {
+            margin: 0 auto;
+            max-width: 60rem;
+        }
     }
 
     &-form {
         background-color: var(--color-white);
         padding: 5rem;
         box-shadow: var(--card-shadow);
+        z-index: 10;
+
+        @media only screen and (max-width: $breakpoint-lg) {
+            margin: 0 auto;
+            max-width: 54rem;
+        }
+
+        @media only screen and (max-width: $breakpoint-sm) {
+            padding: 3rem;
+        }
 
         &__group {
             display: block;
@@ -53,13 +91,45 @@
 
         &__group-datetime {
             display: grid;
-            grid-template-columns: 12rem 8rem 8rem 10rem;
+            grid-template-columns: 12rem 1fr;
             column-gap: 1.5rem;
+
+            @media only screen and (max-width: $breakpoint-sm) {
+                grid-template-columns: 1fr;
+            }
 
             &__finput {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+
+                @media only screen and (max-width: $breakpoint-sm) {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            &__inputs {
+                display: grid;
+                grid-template-columns: 8rem 8rem 10rem;
+                column-gap: 1.5rem;
+
+                @media only screen and (max-width: $breakpoint-sm) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                & input {
+                    z-index: 10;
+                    display: block;
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+                & select {
+                    z-index: 10;
+                    display: block;
+                    width: 100%;
+                    max-width: 100%;
+                }
             }
         }
 
@@ -71,6 +141,11 @@
             padding: 2rem 0;
             align-items: center;
             justify-items: center;
+
+            & p {
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
         }
 
         &__label {
@@ -91,6 +166,8 @@
             padding: 1rem 1.5rem 2rem 1.5rem;
             font-size: 1.8rem;
             font-family: 'Spartan', sans-serif;
+            -webkit-appearance: none;
+            border-radius: 0;
 
             &::-webkit-outer-spin-button,
             &::-webkit-inner-spin-button {
@@ -103,6 +180,18 @@
                 font-size: 1.8rem;
                 opacity: 0.5;
             }
+        }
+
+        &__select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: none;
+            border-bottom: 1px solid var(--color-black);
+            padding: 1rem 1.5rem 2rem 1.5rem;
+            font-size: 1.8rem;
+            font-family: 'Spartan', sans-serif;
+            border-radius: 0;
         }
 
         &__text {
@@ -141,9 +230,12 @@
                 align-items: center;
                 width: 6.5rem;
                 height: 3rem;
+                transition: all 0.2s ease;
+                opacity: 0.7;
 
                 &:hover {
-                    transform: scale(1.1);
+                    transform: scale(1.5);
+                    opacity: 1;
                 }
             }
         }
@@ -156,7 +248,8 @@
         background-image: url(../../../images/patterns/pattern-curve-bottom-right.svg);
 
         @media only screen and (max-width: $breakpoint-lg) {
-            background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
+            height: 45rem;
+            background-image: url(../../../images/patterns/pattern-curve-bottom-right.svg);
             background-position-y: 10rem, bottom;
             background-position-x: -67vw, 52vw;
         }

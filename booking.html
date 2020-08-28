@@ -36,26 +36,34 @@
                                 <span class="reservations-form__text">Pick a date</span>
 
                             </div>
-                            <label class="reservations-form__label" for="day">Date</label>
-                            <input class="reservations-form__input" id="day" type="number" placeholder="DD" min="1" max="31">
-                            <input class="reservations-form__input" id="month" type="number" placeholder="MM" min="1" max="12">
-                            <input class="reservations-form__input" id="year" type="number" placeholder="YYYY" min="2020" max="2022">
+                            <div class="reservations-form__group-datetime__inputs">
+                                <input class="reservations-form__input" id="day" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="DD" min="1" max="31">
+                                <input class="reservations-form__input" id="month" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="MM" min="1" max="12">
+                                <input class="reservations-form__input" id="year" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="YYYY" min="2020" max="2022">
+                            </div>
                         </div>
                         <div class="reservations-form__group reservations-form__group-datetime">
                             <div class="reservations-form__group-datetime__finput">
                                 <span class="reservations-form__text">Pick a time</span>
 
                             </div>
-                            <label class="reservations-form__label" for="hour">Time</label>
-                            <input class="reservations-form__input" id="hour" type="number" placeholder="09" min="01" max="12">
-                            <input class="reservations-form__input" id="minute" type="number" placeholder="00" min="00" max="59">
+                            <div class="reservations-form__group-datetime__inputs">
+                                <input class="reservations-form__input" id="hour" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="09" min="01" max="12">
+                                <input class="reservations-form__input" id="minute" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="00" min="00" max="59">
+                                <select class="reservations-form__select" id="meridiem">
+                                    <option value="" hidden>...</option>
+                                    <option value="AM">AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                            </div>
+
                         </div>
                         <div class="reservations-form__group reservations-form__group-numpicker">
                             <button class="reservations-form__button-numpicker" id="minus">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="7" height="3" pointer-events="bounding-box">
                                     <path fill="#9E7F66" d="M6.425 2.977V.601H.629v2.376z" /></svg>
                             </button>
-                            <p><span id="num-of-people">1</span> <span class="numpicker-text">people</span></p>
+                            <p><span id="num-of-people">2</span> <span class="numpicker-text">people</span></p>
                             <button class="reservations-form__button-numpicker" id="plus">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" pointer-events="bounding-box">
                                     <path fill="#9E7F66" d="M6.227 10.156V6.727h3.429V4.342H6.227V.913H3.842v3.429H.413v2.385h3.429v3.429z" /></svg>
@@ -69,8 +77,7 @@
             </div>
         </div>
     </main>
-    <section class="reservations-bottom">
-    </section>
+    <section class="reservations-bottom"></section>
     <footer class="footer">
         <div class="container">
             <div class="footer-brand">
@@ -80,7 +87,7 @@
                 <div class="footer-details__address">
                     <span>Marthwaite, Sedbergh</span>
                     <span>Cumbria</span>
-                    <span>+00 44 123 4567</span>
+                    <span><a href="tel:+00 44 123 4567" class="tel">+00 44 123 4567</a></span>
                 </div>
                 <div class="footer-details__hours">
                     <span>Open Times</span>
@@ -90,6 +97,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/booking.js" defer></script>
 </body>
 
 </html>

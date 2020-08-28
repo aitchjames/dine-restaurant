@@ -323,6 +323,14 @@ img {
       letter-spacing: 2px;
       line-height: 2;
       white-space: nowrap; }
+      .footer-details__address span .tel, .footer-details__hours span .tel {
+        color: var(--color-white);
+        display: block;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 2;
+        white-space: nowrap; }
 
 .hero {
   padding-top: 6.5rem;
@@ -569,7 +577,9 @@ img {
   padding-top: 6.5rem;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../../../images/booking/hero-bg-desktop.jpg); }
+  background-image: url(../../../images/booking/hero-bg-desktop.jpg);
+  z-index: 10;
+  overflow: visible; }
   @media only screen and (max-width: 1024px) {
     .reservations {
       background-image: url(../../../images/booking/hero-bg-tablet.jpg); } }
@@ -578,35 +588,85 @@ img {
       background-image: url(../../../images/booking/hero-bg-mobile.jpg); } }
   .reservations .container .hero-brand {
     margin-bottom: 15rem; }
+    @media only screen and (max-width: 1024px) {
+      .reservations .container .hero-brand {
+        margin-bottom: 3rem; } }
+    @media only screen and (max-width: 640px) {
+      .reservations .container .hero-brand {
+        margin: 0 auto 3rem auto; } }
   .reservations-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 7.5rem;
-    grid-template-areas: 'res-text res-form'; }
+    grid-template-areas: 'res-text res-form';
+    z-index: 10; }
     @media only screen and (max-width: 1024px) {
       .reservations-content {
         grid-template-columns: 1fr;
         grid-template-areas: 'res-text' 'res-form'; } }
+    @media only screen and (max-width: 1024px) {
+      .reservations-content__text {
+        margin: 0 auto 3rem auto;
+        max-width: 60rem;
+        text-align: center; } }
+    @media only screen and (max-width: 640px) {
+      .reservations-content__text {
+        max-width: 33rem; } }
   .reservations-heading {
     font-weight: 400;
     margin-bottom: 1rem; }
   .reservations-body {
     max-width: 45rem; }
+    @media only screen and (max-width: 1024px) {
+      .reservations-body {
+        margin: 0 auto;
+        max-width: 60rem; } }
   .reservations-form {
     background-color: var(--color-white);
     padding: 5rem;
-    box-shadow: var(--card-shadow); }
+    box-shadow: var(--card-shadow);
+    z-index: 10; }
+    @media only screen and (max-width: 1024px) {
+      .reservations-form {
+        margin: 0 auto;
+        max-width: 54rem; } }
+    @media only screen and (max-width: 640px) {
+      .reservations-form {
+        padding: 3rem; } }
     .reservations-form__group {
       display: block;
       margin-bottom: 2rem; }
     .reservations-form__group-datetime {
       display: grid;
-      grid-template-columns: 12rem 8rem 8rem 10rem;
+      grid-template-columns: 12rem 1fr;
       column-gap: 1.5rem; }
+      @media only screen and (max-width: 640px) {
+        .reservations-form__group-datetime {
+          grid-template-columns: 1fr; } }
       .reservations-form__group-datetime__finput {
         display: flex;
         flex-direction: column;
         justify-content: center; }
+        @media only screen and (max-width: 640px) {
+          .reservations-form__group-datetime__finput {
+            margin-bottom: 1rem; } }
+      .reservations-form__group-datetime__inputs {
+        display: grid;
+        grid-template-columns: 8rem 8rem 10rem;
+        column-gap: 1.5rem; }
+        @media only screen and (max-width: 640px) {
+          .reservations-form__group-datetime__inputs {
+            grid-template-columns: repeat(3, 1fr); } }
+        .reservations-form__group-datetime__inputs input {
+          z-index: 10;
+          display: block;
+          width: 100%;
+          max-width: 100%; }
+        .reservations-form__group-datetime__inputs select {
+          z-index: 10;
+          display: block;
+          width: 100%;
+          max-width: 100%; }
     .reservations-form__group-numpicker {
       border-bottom: 1px solid var(--color-black);
       display: grid;
@@ -615,6 +675,9 @@ img {
       padding: 2rem 0;
       align-items: center;
       justify-items: center; }
+      .reservations-form__group-numpicker p {
+        font-size: 1.8rem;
+        font-weight: 600; }
     .reservations-form__label {
       border: 0;
       clip: rect(0 0 0 0);
@@ -630,7 +693,9 @@ img {
       border-bottom: 1px solid var(--color-black);
       padding: 1rem 1.5rem 2rem 1.5rem;
       font-size: 1.8rem;
-      font-family: 'Spartan', sans-serif; }
+      font-family: 'Spartan', sans-serif;
+      -webkit-appearance: none;
+      border-radius: 0; }
       .reservations-form__input::-webkit-outer-spin-button, .reservations-form__input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0; }
@@ -638,6 +703,16 @@ img {
         font-family: 'Spartan', sans-serif;
         font-size: 1.8rem;
         opacity: 0.5; }
+    .reservations-form__select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      border-bottom: 1px solid var(--color-black);
+      padding: 1rem 1.5rem 2rem 1.5rem;
+      font-size: 1.8rem;
+      font-family: 'Spartan', sans-serif;
+      border-radius: 0; }
     .reservations-form__text {
       font-size: 1.8rem;
       color: var(--color-black); }
@@ -668,9 +743,12 @@ img {
         justify-content: center;
         align-items: center;
         width: 6.5rem;
-        height: 3rem; }
+        height: 3rem;
+        transition: all 0.2s ease;
+        opacity: 0.7; }
         .reservations-form__button-numpicker:hover {
-          transform: scale(1.1); }
+          transform: scale(1.5);
+          opacity: 1; }
   .reservations-bottom {
     height: 30rem;
     background-color: var(--color-white);
@@ -678,6 +756,7 @@ img {
     background-image: url(../../../images/patterns/pattern-curve-bottom-right.svg); }
     @media only screen and (max-width: 1024px) {
       .reservations-bottom {
-        background-image: url(../../../images/patterns/pattern-curve-top-right.svg), url(../../../images/patterns/pattern-curve-top-left.svg);
+        height: 45rem;
+        background-image: url(../../../images/patterns/pattern-curve-bottom-right.svg);
         background-position-y: 10rem, bottom;
         background-position-x: -67vw, 52vw; } }
