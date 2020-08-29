@@ -26,37 +26,34 @@
                         <div class="reservations-form__group">
                             <label class="reservations-form__label" for="name">Name</label>
                             <input class="reservations-form__input" id="name" type="text" placeholder="Name">
+                            <small></small>
                         </div>
                         <div class="reservations-form__group">
                             <label class="reservations-form__label" for="email">Email</label>
                             <input class="reservations-form__input" id="email" type="email" placeholder="Email">
+                            <small></small>
                         </div>
                         <div class="reservations-form__group reservations-form__group-datetime">
                             <div class="reservations-form__group-datetime__finput">
                                 <span class="reservations-form__text">Pick a date</span>
-
+                                <small></small>
                             </div>
-                            <div class="reservations-form__group-datetime__inputs">
-                                <input class="reservations-form__input" id="day" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="DD" min="1" max="31">
-                                <input class="reservations-form__input" id="month" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="MM" min="1" max="12">
-                                <input class="reservations-form__input" id="year" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="YYYY" min="2020" max="2022">
-                            </div>
+                            <input class="reservations-form__input" id="day" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="DD" min="1" max="31">
+                            <input class="reservations-form__input" id="month" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="MM" min="1" max="12">
+                            <input class="reservations-form__input" id="year" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="YYYY" min="2020" max="2022">
                         </div>
                         <div class="reservations-form__group reservations-form__group-datetime">
                             <div class="reservations-form__group-datetime__finput">
                                 <span class="reservations-form__text">Pick a time</span>
-
+                                <small></small>
                             </div>
-                            <div class="reservations-form__group-datetime__inputs">
-                                <input class="reservations-form__input" id="hour" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="09" min="01" max="12">
-                                <input class="reservations-form__input" id="minute" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="00" min="00" max="59">
-                                <select class="reservations-form__select" id="meridiem">
-                                    <option value="" hidden>...</option>
-                                    <option value="AM">AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                            </div>
-
+                            <input class="reservations-form__input" id="hour" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="09" min="01" max="12">
+                            <input class="reservations-form__input" id="minute" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="00" min="00" max="59">
+                            <select class="reservations-form__select" id="meridiem">
+                                <option value="" hidden>...</option>
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
                         </div>
                         <div class="reservations-form__group reservations-form__group-numpicker">
                             <button class="reservations-form__button-numpicker" id="minus">

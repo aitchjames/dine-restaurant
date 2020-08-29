@@ -9,6 +9,7 @@
   --color-border: rgba(151, 151, 151, 0.15);
   --color-dark-blue-shadow: rgba(56, 66, 85, 0.5);
   --color-error: #B54949;
+  --color-sucess: #77c72b;
   --transition: 300ms ease-in-out;
   --transition-2: 100ms ease-in-out;
   --card-shadow: 0 7.5rem 10rem -5rem var(--color-dark-blue-shadow); }
@@ -643,37 +644,50 @@ img {
     .reservations-form__group {
       display: block;
       margin-bottom: 2rem; }
+      .reservations-form__group small {
+        display: block;
+        margin-top: 1rem;
+        padding-left: 1.5rem;
+        font-size: 1rem;
+        color: var(--color-error);
+        font-weight: 500;
+        visibility: hidden; }
+      .reservations-form__group.success .reservations-form__input {
+        border-color: var(--color-success); }
+        .reservations-form__group.success .reservations-form__input::placeholder {
+          color: var(--color-success);
+          opacity: 0.7; }
+      .reservations-form__group.error .reservations-form__input {
+        border-color: var(--color-error); }
+        .reservations-form__group.error .reservations-form__input::placeholder {
+          color: var(--color-error);
+          opacity: 0.7; }
+      .reservations-form__group.error .reservations-form__text {
+        color: var(--color-error); }
+      .reservations-form__group.error .reservations-form__group-datetime__finput small {
+        margin-top: 0.5rem;
+        padding-left: 0; }
+      .reservations-form__group.error small {
+        visibility: visible; }
     .reservations-form__group-datetime {
       display: grid;
-      grid-template-columns: 12rem 1fr;
+      grid-template-columns: repeat(4, min-content);
+      grid-template-areas: 'finput dt-1 dt-2 dt-3';
       column-gap: 1.5rem; }
       @media only screen and (max-width: 640px) {
         .reservations-form__group-datetime {
-          grid-template-columns: 1fr; } }
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 1fr 1fr;
+          grid-template-areas: 'finput finput finput'  'dt-1 dt-2 dt-3'; } }
       .reservations-form__group-datetime__finput {
+        grid-area: finput;
+        min-width: 12rem;
         display: flex;
         flex-direction: column;
         justify-content: center; }
         @media only screen and (max-width: 640px) {
           .reservations-form__group-datetime__finput {
             margin-bottom: 1rem; } }
-      .reservations-form__group-datetime__inputs {
-        display: grid;
-        grid-template-columns: 8rem 8rem 10rem;
-        column-gap: 1.5rem; }
-        @media only screen and (max-width: 640px) {
-          .reservations-form__group-datetime__inputs {
-            grid-template-columns: repeat(3, 1fr); } }
-        .reservations-form__group-datetime__inputs input {
-          z-index: 10;
-          display: block;
-          width: 100%;
-          max-width: 100%; }
-        .reservations-form__group-datetime__inputs select {
-          z-index: 10;
-          display: block;
-          width: 100%;
-          max-width: 100%; }
     .reservations-form__group-numpicker {
       border-bottom: 1px solid var(--color-black);
       display: grid;
@@ -710,7 +724,18 @@ img {
         font-family: 'Spartan', sans-serif;
         font-size: 1.8rem;
         opacity: 0.5; }
+      .reservations-form__input[type="number"] {
+        min-width: 8rem; }
+      .reservations-form__input[type="number"]:nth-child(2) {
+        grid-area: dt-1; }
+      .reservations-form__input[type="number"]:nth-child(3) {
+        grid-area: dt-2; }
+      .reservations-form__input[type="number"]:nth-child(4) {
+        grid-area: dt-3;
+        min-width: 10rem; }
     .reservations-form__select {
+      grid-area: dt-3;
+      min-width: 10rem;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
