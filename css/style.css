@@ -744,7 +744,8 @@ img {
       padding: 1rem 1.5rem 2rem 1.5rem;
       font-size: 1.8rem;
       font-family: 'Spartan', sans-serif;
-      border-radius: 0; }
+      border-radius: 0;
+      background-color: transparent; }
     .reservations-form__text {
       font-size: 1.8rem;
       color: var(--color-black); }
